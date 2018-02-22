@@ -1,7 +1,3 @@
-﻿-- Function: public.sync_table(character varying, character varying, character varying)
-
--- DROP FUNCTION public.sync_table(character varying, character varying, character varying);
-
 CREATE OR REPLACE FUNCTION public.sync_table(
     src_table_name character varying,
     dst_table_name character varying,
@@ -116,5 +112,3 @@ end;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION public.sync_table(character varying, character varying, character varying)
-  OWNER TO webradius;
