@@ -1,7 +1,3 @@
-﻿-- Function: public.pgrep(character varying, character varying, integer)
-
--- DROP FUNCTION public.pgrep(character varying, character varying, integer);
-
 CREATE OR REPLACE FUNCTION public.pgrep(
     tablename_pattern character varying,
     row_pattern character varying,
@@ -34,5 +30,3 @@ $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100
   ROWS 1000;
-ALTER FUNCTION public.pgrep(character varying, character varying, integer)
-  OWNER TO webradius;
